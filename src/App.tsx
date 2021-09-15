@@ -66,6 +66,5 @@ function App() {
 		</BrowserRouter>
 	);
 }
-import { format } from "path/posix";
 
 export default App;
