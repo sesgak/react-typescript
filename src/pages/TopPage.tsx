@@ -4,23 +4,7 @@ import Header from "../components/Header";
 import Title from "../components/Title";
 import Selector from "../components/Selector";
 import Results from "../components/Results";
-
-type TopPageType = {
-    countriesJson: {
-        Country: string,
-        Slug: string,
-    }[],
-    setCountry: React.Dispatch<React.SetStateAction<string>>,
-    countryData: {
-
-        date: string,
-        newCofirmed: number,
-        totalCofirmed: number,
-        newDeaths: number,
-        totalDeaths: number,
-    },
-    loading: boolean,
-}
+import { TopPageType } from "../types";
 
 const TopPage = ({countriesJson, setCountry,
                   countryData, loading}: TopPageType) => {

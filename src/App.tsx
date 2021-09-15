@@ -6,22 +6,7 @@ import countriesJson from "./countries.json"
 import TopPage from "./pages/TopPage";
 import WorldPage from "./pages/WorldPage";
 import './App.css';
-
-type CountryDataType = {
-	date: string,
-	newCofirmed: number,
-	totalCofirmed: number,
-	newDeaths: number,
-	totalDeaths: number,	
-}
-
-interface SingleCountriesDataType {
-	Country: string,
-	NewConfirmed: number,
-	TotalConfirmed: number,
-}
-
-interface AllCountriesDataTypeArray extends Array<SingleCountriesDataType> {}
+import { CountryDataType, AllCountriesDataTypeArray } from "./types";
 
 function App() {
 	const [loading, setLoading] = useState<boolean>(false);
@@ -81,5 +66,6 @@ function App() {
 		</BrowserRouter>
 	);
 }
+import { format } from "path/posix";
 
 export default App;

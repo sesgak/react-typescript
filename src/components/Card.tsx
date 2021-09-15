@@ -1,14 +1,6 @@
 //Card.js
 
-interface SingleCountriesDataType {
-	Country: string,
-	NewConfirmed: number,
-	TotalConfirmed: number,
-}
-
-interface CardType {
-    allCountriesData: Array<SingleCountriesDataType>
-}
+import { CardType } from "../types";
 
 const Card = ({allCountriesData}: CardType) => {
     return (
