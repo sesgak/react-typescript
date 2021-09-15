@@ -2,7 +2,19 @@
 
 import Loading from "./Loading";
 
-const Results = ({countryData, loading}) => {
+type ResultsType = {
+    countryData: {
+
+        date: string,
+        newCofirmed: number,
+        totalCofirmed: number,
+        newDeaths: number,
+        totalDeaths: number,
+    },
+    loading: boolean,
+}
+
+const Results = ({countryData, loading}: ResultsType) => {
     const { date, newCofirmed, totalCofirmed, newDeaths, totalDeaths } = countryData;
     return (
         <div className="results-container">
